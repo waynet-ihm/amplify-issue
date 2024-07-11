@@ -2,7 +2,7 @@
     "name": "@vts/backend",
     "version": "1.0.0",
     "scripts": {
-        "sandbox": "AWS_REGION=us-east-1 npx ampx sandbox --profile ihm"
+        "sandbox": "AWS_REGION=us-east-1 npx ampx sandbox"
     },
     "dependencies": {
         "aws-amplify": "^6.4.0"
