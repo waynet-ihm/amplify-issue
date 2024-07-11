@@ -4,6 +4,10 @@
   "description": "d",
   "main": "index.js",
   "scripts": {
+    "clean:all": "npm run clean:build && npm run clean:node_modules && npm run clean:npm-lock",
+    "clean:build": "rm -rf ./.parcel-cache && rm -rf ./build && rm -rf ./cdk.out && rm -rf ./packages/**/build && rm -rf ./packages/**/tsconfig.tsbuildinfo && rm -f ./tsconfig.tsbuildinfo && rm -rf packages/media-service-api/src/generated/schema*",
+    "clean:node_modules": "rm -rf ./node_modules && rm -rf ./packages/**/node_modules",
+    "clean:npm-lock": "rm *-lock.json && rm -rf ./packages/**/*-lock.json",
     "sandbox": "npm run sandbox -w @vts/backend",
     "ssandbox": "AWS_REGION=us-east-1 npx ampx sandbox --profile ihm --dir-to-watch packages/backend",
     "test": "echo \"Error: no test specified\" && exit 1",
